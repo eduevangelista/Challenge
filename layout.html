@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+    <title>Teste HTML</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <div class="container-delivery">
+            <div class="form-group1">
+                <input type="text" name="name" id="nomeCLiente" placeholder=" Nome Cliente">
+            </div>
+
+            <div class="form-group1">
+                <input type="text" name="peso" id="PesoEntrega" placeholder=" Peso Entrega">
+            </div>
+
+            <div class="form-group1">
+                <label for="Latitude"></label>
+                <input type="text" name="Endereço" id="EndereçoCliente" placeholder=" Endereço Cliente">
+            </div>
+
+            <div class="form-group2">
+                <label for="Latitude"></label>
+                <input type="text" name="Latitude" id="Latitude" placeholder=" Latitude">
+            </div>
+
+            <div class="form-group2">
+                <label for="Longitude"></label>
+                <input type="text" name="longitude" id="Longitude" placeholder=" Longitude">
+            </div>
+
+            <div class="justfy-center">
+                <button class="btn-cadastro"> CADASTRAR CLIENTE</button>
+            </div>
+
+
+        </div>
+
+        <div class="container-reset">
+            <input type="reset" class="btn-reset" id="btn-reset" value="RESETAR CADASTRO">
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <!--------------------------------------------------------------->
+
+    <div class="container2">
+
+
+
+
+        <div class="map" id="map" > </div>
+
+
+        
+
+
+
+
+
+
+
+        <div class="table" id="table">
+
+            <table border="1px" class="table2">
+                <tr class="l1">
+                    <td>Nome</td>
+                    <td>Rua</td>
+                    <td>Cidade</td>
+                    <td>País</td>
+                    <td>Peso</td>
+                    <td>Lat</td>
+                    <td>Lng</td>
+                </tr>
+                <tr class="l2">
+                    <td> xxxx</td>
+                    <td>xxxx</td>
+                    <td>xxxxx</td>
+                    <td>xxxxxx</td>
+                    <td>xxxxx</td>
+                    <td>xxxxx</td>
+                    <td>xxxxx</td>
+                </tr>
+                <tr class="l3">
+                    <td>xxxx</td>
+                    <td>xxxx</td>
+                    <td>xxxxx</td>
+                    <td>xxxxxx</td>
+                    <td>xxxxx</td>
+                    <td>xxxxx</td>
+                    <td>xxxxx</td>
+                </tr>
+                <tr class="l4">
+                    <td>xxxx</td>
+                    <td>xxxx</td>
+                    <td>xxxxx</td>
+                    <td>xxxxxx</td>
+                    <td>xxxxx</td>
+                    <td>xxxxx</td>
+                    <td>xxxxx</td>
+                </tr>
+
+
+            </table>
+
+        </div>
+
+        <div class="Paragrafo">
+            
+            <p class="Pfinal">*Peso Total/ Total de Clientes</p>
+        
+        </div>
+
+        <script>
+            var map = L.map('map').setView([-23.45926037094232, -46.63322925567627], 13);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '© OpenStreetMap'
+            }).addTo(map);
+
+            function onMapClick(e) {
+                alert("Posição >    " + e.latlng);
+            }
+
+            map.on('click', onMapClick);
+
+            
+        </script>
+        <script src="js/scripts.js"></script>    
+    </div>
+
+        
